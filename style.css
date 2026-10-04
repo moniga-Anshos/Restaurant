@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 1000px;
+}
+p {
+    font-weight: 300;
+    color: #111;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo {
+    color: #111;
+}
+header .logo span {
+    color: #ff0157;
+}
+header .navigation {
+    position: relative;
+    display: flex;
+}
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navigation li a {
+    color: #111;
+}
+header.sticky .navigation li a:hover {
+    color: #ff0157;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./assests/image/fru.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+}
+.banner .content {
+    position: relative;
+    max-width: 900px;
+    text-align: center;
+    z-index: 1;
+}
+.banner .content h2 {
+    font-size: 5em;
+    color: #fff;
+    line-height: 1.1;
+}
+.banner .content p {
+    font-size: 1em;
+    color: #fff;
+    margin-top: 20px;
+}
+.btn {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover {
+    letter-spacing: 6px;
+}
+section {
+    padding: 100px;
+}
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+.titleText {
+    color: #111;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.titleText span {
+    color: #ff0157;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.row .col50 p {
+    margin-top: 20px;
+    line-height: 1.7;
+}
+.imgBx {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+.imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.About .row {
+    align-items: center;
+}
+.About .imgBx {
+    height: 400px;
+}
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.title p {
+    margin-top: 10px;
+}
+.menu {
+    background: #f8f8f8;
+}
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.menu .content .box {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+.menu .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.menu .content .box .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu .content .box .text {
+    padding: 15px 0 5px;
+}
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+.expert .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.expert .content .box {
+    width: 250px;
+    margin: 15px;
+}
+.expert .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.expert .content .box .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.expert .content .box .text {
+    padding: 15px 0;
+}
+
+.expert .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+}
+.testimonials {
+    background: url("./assests/image/fru.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.testimonials .title,
+.testimonials .content {
+    position: relative;
+    z-index: 1;
+}
+.white .titleText,
+.white p {
+    color: #fff;
+}
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.testimonials .content .box {
+    width: 300px;
+    height: 380px;
+    margin: 20px;
+    padding: 25px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.testimonials .content .box .imgBx {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.testimonials .content .box .imgBx img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonials .content .box .text {
+    width: 100%;
+    text-align: center;
+}
+.testimonials .content .box .text p {
+    font-style: italic;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.testimonials .content .box .text h3 {
+    margin-top: 20px;
+    color: #ff0157;
+    font-weight: 600;
+}
+.contact {
+    background: url("./assests/image/cutsma.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+}
+
+.contactContent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contactForm {
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    max-width: 500px;
+}
+.contactForm h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+.contactForm .inputBox textarea {
+    height: 80px;
+}
+.contactForm .inputBox input[type="submit"] {
+    background: #ff0157;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contactImage {
+    width: 50%;
+    height: 450px;
+}
+.contactImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.copyrightText {
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.copyrightText p {
+    color: #333;
+}
+.copyrightText a {
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+    header .navigation {
+        display: none;
+    }
+    header .navigation.active {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+    }
+    header .navigation li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    header .navigation li a {
+        color: #111;
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url("./assests/image/menu.png");
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active {
+        background: url("./assests/image/cclo.png");
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+    section {
+        padding: 80px 20px;
+    }
+
+    .banner .content h2 {
+        font-size: 3.5em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        width: 100%;
+    }
+    .About .imgBx {
+        margin-top: 30px;
+
+        height: 350px;
+    }
+    .menu .content .box {
+        margin: 15px;
+    }
+    .testimonials .content .box {
+        margin: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .banner {
+        min-height: 100vh;
+    }
+    .banner .content {
+        padding: 0 15px;
+    }
+    .banner .content h2 {
+        font-size: 2.5em;
+    }
+    .banner .content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    section {
+        padding: 60px 20px;
+    }
+    .titleText {
+        font-size: 2em;
+    }
+    .About .imgBx {
+        height: 280px;
+    }
+    .menu .content .box {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .menu .content .box .imgBx {
+        height: 250px;
+    }
+    .expert .content .box {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .expert .content .box .imgBx {
+        height: 300px;
+    }
+    .testimonials .content .box {
+        width: 100%;
+        margin: 15px 0;
+        padding: 30px 20px;
+    }
+    .contactForm {
+        padding: 40px 25px;
+    }
+
+}
